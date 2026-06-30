@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "../components/Navbar"
 import Home from "./page/Home";
 import About from "./page/About";
 import Services from "./page/Service";
@@ -7,6 +6,7 @@ import Portfolio from "./page/Portfolio";
 import Team from "./page/Team";
 import Pricing from "./page/Pricing";
 import Contact from "./page/Contact";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
