@@ -1,12 +1,13 @@
 import Home from "./page/homePage";
 import About from "./page/aboutPage";
-import Navbar from "./components/navbar";
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Services from "./page/Service";
 import Portfolio from "./page/portfolioPage";
 import Team from "./page/teamPage";
 import Pricing from "./page/pricingPage";
 import Contact from "./page/contactPage";
+import Navbar from "./components/navbar";
 
 
  export default function  App() {
