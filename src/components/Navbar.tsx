@@ -21,9 +21,6 @@ export default  function Navbar() {
       ))}
 
        </div>
-       
-    
-   
      </section>
   );
 }
