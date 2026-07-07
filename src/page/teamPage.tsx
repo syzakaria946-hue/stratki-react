@@ -1,9 +1,9 @@
-function Services() {
+function Team() {
   return (
     <div className="flex justify-end">
-      Services
+      Team
     </div>
   );
 }
 
-export default Services;
+export default Team;

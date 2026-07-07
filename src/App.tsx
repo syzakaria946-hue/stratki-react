@@ -1,29 +1,28 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./page/Home";
-import About from "./page/About";
+import Home from "./page/homePage";
+import About from "./page/aboutPage";
+import Navbar from "./components/navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Services from "./page/Service";
-import Portfolio from "./page/Portfolio";
-import Team from "./page/Team";
-import Pricing from "./page/Pricing";
-import Contact from "./page/Contact";
-import Navbar from "./components/Navbar";
+import Portfolio from "./page/portfolioPage";
+import Team from "./page/teamPage";
+import Pricing from "./page/pricingPage";
+import Contact from "./page/contactPage";
 
-function App() {
+
+ export default function  App() {
   return (
-    <>
-      <Navbar />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </>
+    <BrowserRouter>
+     <Navbar/>
+     <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About/>} /> 
+          <Route path="/services" element={<Services />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/contact" element={<Contact />} />
+      </Routes>   
+    </BrowserRouter>
   );
 }
 
-export default App;

@@ -1,15 +1,29 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
+import logo from "../assets/image/logo (1).png"
 
-export default function Navbar() {
+import { navList } from '../constantes';
+
+
+export default  function Navbar() {
   return (
-    <div>
-      <ul>
-        <li><Link to='/'>Accueil</Link></li>
-        <li><Link to='/about'>A propos</Link></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-  )
+    <section className='gap-12 bg-slate-900 p-12 fixed top-0 w-full z-50 '>
+      
+       <div className=' flex justify-around items-center'>
+         <img 
+        src={logo}
+         alt="logo" 
+          />
+    
+      {navList.map((item,index)=>(
+      <nav key={index} className='text-white  hover:text-green-600'>
+        <Link to={item.lien}>{item.nom}</Link>
+      </nav>
+      ))}
+
+       </div>
+       
+    
+   
+     </section>
+  );
 }

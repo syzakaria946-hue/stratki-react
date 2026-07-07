@@ -1,14 +1,11 @@
-function Home() {
+
+import bg from '../assets/image/bg-header.png'
+
+ export default function Home() {
   return (
     <section
-      className="h-screen bg-cover bg-center relative"
-      style={{
-        backgroundImage: "url('/hero.jpg')",
-      }}
-    >
-      <div className="absolute inset-0 bg-black/60"></div>
-
-      <div className="relative h-full flex items-center justify-center">
+      className="h-screen bg-black/60  bg-blend-multiply bg-cover bg-center" style={{backgroundImage:`url(${bg})`}}>
+      <div className=" z-10 h-full flex items-center justify-center">
 
         <div className="text-center">
 
@@ -33,4 +30,5 @@ function Home() {
   );
 }
 
-export default Home;
+
+
