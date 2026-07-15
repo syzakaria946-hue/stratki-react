@@ -1,4 +1,4 @@
-import type { SkillsProps } from "../data/skills"
+import type { SkillsProps } from "../type/skills"
 
 
 const CardSvg = ({title, percentage, description}:SkillsProps) => {

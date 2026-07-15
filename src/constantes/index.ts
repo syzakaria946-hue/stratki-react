@@ -1,6 +1,6 @@
-import type { SkillsProps } from './../data/skills';
+import type { SkillsProps } from '../type/skills';
 
-import type { ServiceProps } from "../data/Service";
+import type { ServiceProps } from "../type/Service";
 
 import service1 from "../assets/image/service1.png";
 import service2 from "../assets/image/service2.png";
@@ -8,10 +8,16 @@ import service3 from "../assets/image/service3.png";
 import service4 from "../assets/image/service4.png";
 import service5 from "../assets/image/service5.png";
 import service6 from "../assets/image/service6.png";
-import team1 from "../assets/image/team1-Dpzh5qbd.jpg";
-import team2 from "../assets/image/team2-DzE8l89-.jpg";
-import team3 from "../assets/image/team3-DhsEGRez.jpg";
-import team4 from "../assets/image/team4-_W8ui1z1.jpg";
+import portfolio1 from "../assets/image/portfolio-1.png"
+import portfolio2 from "../assets/image/portfolio-2.png";
+import portfolio3 from "../assets/image/portfolio-3.png";
+import portfolio4 from "../assets/image/portfolio-4.png";
+import portfolio5 from "../assets/image/portfolio-5.png";
+import portfolio6 from "../assets/image/portfolio-6.png";
+import portfolio7 from "../assets/image/portfolio-7.png";
+import portfolio8 from "../assets/image/portfolio-8.png";
+import portfolio9 from "../assets/image/portfolio-9.png";
+import type { propsPortofolio } from '../type/portofolio';
 
 export interface meunType{
     lien:string,
@@ -114,6 +120,65 @@ export const SkillsProp:SkillsProps[] =[
   }
 
 ];
+
+export const portfolioOptions =[
+  "All",
+  "Development",
+  "Optimization",
+  "Integration",
+  "Marketing",
+  "Test"
+
+];
+
+
+export const portfolioItem: propsPortofolio[] = [
+  {
+    img: portfolio1,
+    nom: "porto1",
+    categorie: portfolioOptions[1],
+  },
+  {
+    img: portfolio2,
+    nom: "porto2",
+    categorie: portfolioOptions[1],
+  },
+  {
+    img: portfolio3,
+    nom: "porto3",
+    categorie: portfolioOptions[2],
+  },
+  {
+    img: portfolio4,
+    nom: "porto4",
+    categorie: portfolioOptions[1],
+  },
+  {
+    img: portfolio5,
+    nom: "porto5",
+    categorie: portfolioOptions[2],
+  },
+  {
+    img: portfolio6,
+    nom: "porto6",
+    categorie: portfolioOptions[3],
+  },
+  {
+    img: portfolio7,
+    nom: "porto7",
+    categorie: portfolioOptions[3],
+  },
+  {
+    img: portfolio8,
+    nom: "porto8",
+    categorie: portfolioOptions[1],
+  },
+  {
+    img: portfolio9,
+    nom: "porto9",
+    categorie: portfolioOptions[4],
+  },
+]
 
 export const stats2 =[
     {value: "375+", label: "Projects"},
