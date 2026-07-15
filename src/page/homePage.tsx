@@ -21,11 +21,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="py-20 bg-white"></div>
+      <div className="py-20 min-h-24"></div>
 
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center ">
         {/* Image */}
-        <div className="relative">
+        <div className="relative gap-4">
           <img
             src={aboutus}
             alt="About"
@@ -34,7 +34,7 @@ export default function Home() {
 
           {/* Experience Card */}
           <div className="absolute bottom-8 left-0 bg-green-500 text-white w-40 h-40 flex flex-col justify-center items-center rounded shadow-lg">
-            <h2 className="text-5xl font-bold">12</h2>
+            <h2 className="text-5xl font-bold ">12</h2>
 
             <p className="text-center mt-2 text-lg">
               Years

@@ -18,11 +18,9 @@ import portfolio7 from "../assets/image/portfolio-7.png";
 import portfolio8 from "../assets/image/portfolio-8.png";
 import portfolio9 from "../assets/image/portfolio-9.png";
 import type { propsPortofolio } from '../type/portofolio';
+import type { meunType } from '../type/navabar';
 
-export interface meunType{
-    lien:string,
-    nom:string,
-}
+
 
 export const navList:meunType[]=[
     {
