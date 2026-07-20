@@ -1,9 +1,9 @@
 import aboutus from "../assets/image/aboutus-COMvwa4W.png";
 import Sy from "../assets/image/Sy.jpg";
 import bg from "../assets/image/bg-header.png";
-import { plans, Service, SkillsProp, stats2, team } from "../constantes";
-import { CheckIcon } from "lucide-react";
+import { Service, SkillsProp, Stats, team } from "../constantes";
 import CardSvg from "../components/cardSvg";
+import Portfolio from "../components/portoflio";
 
 export default function Home() {
   return (
@@ -160,140 +160,55 @@ export default function Home() {
           <h3 className="text-5xl md:text-5xl font-extrabold text-slate-800 py-3"></h3>
         </div>
       </section>
+      <Portfolio></Portfolio>
 
+      <section
+        id="services"
+        className=" min-h-screen flex items-center justify-center bg-white"
+      >
+        <div className="text-center">
+          <h2 className="text-5xl md:text-7xl font-extrabold text-slate-800 py-3 "></h2>
+        </div>
+      </section>
 
-      <div className="w-full bg-white py-16 px-6 pt-15 gap-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stats2.map((stat, index) => (
-            <div
-              key={index}
-              className="bg-gray-50 rounded-xl pt-10 flex flex-col gap-10 "
-            >
-              <span className="text-3xl md:text-4xl font-bold text-green-500">
-                {stat.value}
-              </span>
-              <span className="text-lg font-semibold text-gray-900">
+      <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-4 p-1.5">
+        {Stats.map((stat) => (
+          <div
+            key={stat.label}
+            className=" bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow p-8 text-center"
+          >
+            <div className="text-2xl md:text-3xl font-bold text-green-600">
+              {stat.value}
+              <div className="mt-2 text-slate-700 font-medium">
                 {stat.label}
-              </span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-center text-5xl md:text-6xl font-extrabold text-gray-800 mb-16">
+          Our Team
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-9">
+          {team.map((member) => (
+            <div key={member.id} className="group flex flex-col items-center">
+              <div className="overflow-hidden roundded">
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-full h-[360px] object-cover transition-all duration-500 group-hover:scale-110 bg-blue-600"
+                />
+              </div>
+              <h3 className="mt-6 text-3xl font-bold text-gray-800 text-center">
+                {member.name}
+              </h3>
+              <p className="text-gray-400 text-xl">{member.role}</p>
             </div>
           ))}
         </div>
       </div>
-
-      <section
-        id="services"
-        className="min-h-screen flex items-center justify-center bg-white"
-      >
-        <div className="text-center"></div>
-        <section className="bg-white py-16 px-6 text-center">
-          <h2 className="text-center text-5xl md:text-7xl font-extrabold text-slate-800 py-3">
-            Our Team
-          </h2>
-
-          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
-            {team.map((member) => (
-              <div
-                key={member.name}
-                className="group relative rounded-xl overflow-hidden bg-slate-50 shadow-sm hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className="aspect-3/4 overflow-hidden">
-                  <img
-                    src={member.img}
-                    alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-
-                <div className="relative p-4 flex items-center justify-between">
-                  <div>
-                    <h3 className="font-bold text-slate-900 leading-tight">
-                      {member.name}
-                    </h3>
-                    <p className="text-sm text-slate-500">{member.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      </section>
-      <div className="text-center">
-        <h2 className="text-5xl md:text-7xl font-extrabold text-gray-700 py-3">
-          Pricing Plan
-        </h2>
-      </div>
-      <section
-        id="services"
-        className="min-h-screen flex fl items-center justify-center bg-white"
-      >
-        <svg
-          className="w-5 h-5 shrink-0 text-green-500"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2.5}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M5 13l4 4L19 7"
-          />
-        </svg>
-        <section className="bg-linear-to-br from-emerald-800 to-emerald-950 py-20 px-6">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-            {plans.map((plan) => (
-              <div
-                key={plan.name}
-                className={`relative rounded-lg p-8 flex flex-col ${
-                  plan.highlighted
-                    ? "bg-blue-600 text-white md:scale-110 shadow-2xl z-10 py-12"
-                    : "bg-white text-slate-900 shadow-lg"
-                }`}
-              >
-                <h3
-                  className={`text-center text-2xl font-extrabold mb-4 ${
-                    plan.highlighted ? "text-green-400" : "text-blue-600"
-                  }`}
-                >
-                  {plan.name}
-                </h3>
-
-                <p className="text-center text-4xl font-extrabold mb-6">
-                  {plan.price}
-                </p>
-
-                <p
-                  className={`text-center text-sm mb-6 ${
-                    plan.highlighted ? "text-blue-100" : "text-slate-500"
-                  }`}
-                >
-                  {plan.description}
-                </p>
-
-                <ul className="space-y-3 mb-8 flex-1">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-3 text-sm">
-                      <CheckIcon />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-      </section>
-
-      <section
-        id="services"
-        className="min-h-screen flex items-center justify-center bg-white"
-      >
-        <div className="text-center">
-          <h2 className="text-5xl md:text-7xl font-extrabold text-slate-800 py-3">
-            Testimonials
-          </h2>
-        </div>
-      </section>
     </section>
   );
 }
