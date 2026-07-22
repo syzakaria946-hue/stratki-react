@@ -1,9 +1,11 @@
 import aboutus from "../assets/image/aboutus-COMvwa4W.png";
 import Sy from "../assets/image/Sy.jpg";
 import bg from "../assets/image/bg-header.png";
-import { Service, SkillsProp, Stats, team } from "../constantes";
+import { pricingPlans, Service, SkillsProp, Stats, team } from "../constantes";
 import CardSvg from "../components/cardSvg";
 import Portfolio from "../components/portoflio";
+import PricingCard from "../components/pricingCard";
+import pricing from "../assets/image/pricing.png"
 
 export default function Home() {
   return (
@@ -186,12 +188,12 @@ export default function Home() {
           </div>
         ))}
       </div>
-
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-center text-5xl md:text-6xl font-extrabold text-gray-800 mb-16">
+        <section className="  min-h-screen flex items-center justify-center  h-full bg-white py-20 min-h-24">
+      <div className="max-w-7xl mx-auto px-6 min-h-24 p-6 m-5 space-x-3">
+        <h2 className="text-center text-5xl md:text-6xl font-bold text-gray-800 mb-16">
           Our Team
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-9">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
           {team.map((member) => (
             <div key={member.id} className="group flex flex-col items-center">
               <div className="overflow-hidden roundded">
@@ -209,6 +211,44 @@ export default function Home() {
           ))}
         </div>
       </div>
+      </section>
+       
+       <section className=" bg-size/60 bg-blend-multiply  relative py-24 overflow-hidden h-screen bg-cover bg-center"
+    style={{ backgroundImage: `url(${pricing})`
+      
+      }}>
+      <div className="max-w-7xl mx-auto px-6 relative">
+
+        <h1 className="text-center text-6xl font-extrabold text-white mb-20">
+          Pricing Plan
+        </h1>
+
+        <div className="relative mt-24 flex flex-col lg:flex-row justify-center items-end text-center">
+
+          {/* Carte gauche */}
+  <div className="w-full lg:w-[32%] text-center">
+    <PricingCard plan={pricingPlans[0]} />
+  </div>
+
+  {/* Carte du milieu */}
+  <div className="w-full lg:w-[36%] lg:-mx-8 lg:-translate-y-12 z-20 text-center">
+    <PricingCard plan={pricingPlans[1]} />
+  </div>
+
+  {/* Carte droite */}
+  <div className="w-full lg:w-[32%] text-center">
+    <PricingCard plan={pricingPlans[2]} />
+  </div>
+
+</div>
+         
+        </div>
+    </section>
+         
+       
+
+
+      
     </section>
   );
 }

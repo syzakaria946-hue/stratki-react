@@ -1,3 +1,4 @@
+import {  type pricingPlan } from './../type/pricing';
 import type { TeamMember } from "../type/team";
 import type { SkillsProps } from "../type/skills";
 import type { ServiceProps } from "../type/Service";
@@ -210,8 +211,52 @@ export const team: TeamMember[]  = [
    img: team4,
  },
 
+];
 
 
+export const pricingPlans: pricingPlan[]=[
+  {
+    id:1,
+    title:"Regulars Package",
+    price:"$289",
+    featured:false,
+    description:"lorem ipsum dolor sit amet connsecttetur adipisicing elit.Optio sint?",
+    features: [
+      "Lorem ipsum dolor sit amet.",
+      "Lorem ipsum.",
+      "Lorem ipsum dolor amet.",
+      "Lorem ipsum dolor sit amet.",
+      "Lorem ipsum dolor sit.",
+    ]
+  },
+  {
+    id:2,
+    title:"Standard Package",
+    price:"$541",
+    featured:true,
+    description:"lorem ipsum dolor sit amet connsecttetur adipisicing elit.Optio sint?",
+    features: [
+      "Lorem ipsum dolor sit amet.",
+      "Lorem ipsum.",
+      "Lorem ipsum dolor amet.",
+      "Lorem ipsum dolor sit amet.",
+      "Lorem ipsum dolor sit.",
+    ]
+  },
+  {
+    id:3,
+    title:"Premium Package",
+    price:"$756",
+    featured:false,
+    description:"lorem ipsum dolor sit amet connsecttetur adipisicing elit.Optio sint?",
+    features: [
+      "Lorem ipsum dolor sit amet.",
+      "Lorem ipsum.",
+      "Lorem ipsum dolor amet.",
+      "Lorem ipsum dolor sit amet.",
+      "Lorem ipsum dolor sit.",
+    ]
+  }
 
 ]
 
